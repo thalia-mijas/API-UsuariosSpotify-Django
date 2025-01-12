@@ -6,7 +6,7 @@ router = DefaultRouter()
 router.register('users', UserViewSet, basename="users")
 
 urlpatterns = [
-  path('spotify/<int:pk>/', SpotifyAPIView.as_view(), name="spotify-apiwiew")
+  path('spotify/<int:pk>/', SpotifyAPIView.as_view(), name="spotify")
 ]
 
 urlpatterns += router.urls
