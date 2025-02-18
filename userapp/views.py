@@ -14,7 +14,7 @@ class UserViewSet(viewsets.ModelViewSet):
     try:
       user = User.objects.get(pk=pk)
       user.delete()
-      return Response({'detail': 'Usuer eliminaded'})
+      return Response({'detail': 'User eliminaded'})
     except User.DoesNotExist:
       return Response({'detail': 'User does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
